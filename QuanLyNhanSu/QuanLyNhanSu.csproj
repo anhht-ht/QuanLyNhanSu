@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -129,12 +129,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NhanViensController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103091611275_Create_Table_NhanVien.cs" />
-    <Compile Include="Migrations\202103091611275_Create_Table_NhanVien.Designer.cs">
-      <DependentUpon>202103091611275_Create_Table_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202103091624187_Create_table_Chucvu.cs" />
     <Compile Include="Migrations\202103091624187_Create_table_Chucvu.Designer.cs">
@@ -148,12 +145,56 @@
     <Compile Include="Migrations\202103091748473_create_table_KTKL.Designer.cs">
       <DependentUpon>202103091748473_create_table_KTKL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103100144590_Create_Table_TrinhDo.cs" />
+    <Compile Include="Migrations\202103100144590_Create_Table_TrinhDo.Designer.cs">
+      <DependentUpon>202103100144590_Create_Table_TrinhDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071417180_Create_table_ThanNhan.cs" />
+    <Compile Include="Migrations\202104071417180_Create_table_ThanNhan.Designer.cs">
+      <DependentUpon>202104071417180_Create_table_ThanNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071424304_Create_table_Chitietnghiviec.cs" />
+    <Compile Include="Migrations\202104071424304_Create_table_Chitietnghiviec.Designer.cs">
+      <DependentUpon>202104071424304_Create_table_Chitietnghiviec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071430589_Create_table_Congtac.cs" />
+    <Compile Include="Migrations\202104071430589_Create_table_Congtac.Designer.cs">
+      <DependentUpon>202104071430589_Create_table_Congtac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071527030_Create_table_ChuyenMon.cs" />
+    <Compile Include="Migrations\202104071527030_Create_table_ChuyenMon.Designer.cs">
+      <DependentUpon>202104071527030_Create_table_ChuyenMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071535212_Create_Table_TrinhDo_ChuyenMon.cs" />
+    <Compile Include="Migrations\202104071535212_Create_Table_TrinhDo_ChuyenMon.Designer.cs">
+      <DependentUpon>202104071535212_Create_Table_TrinhDo_ChuyenMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071541026_Create_table_ChuyenPhong.cs" />
+    <Compile Include="Migrations\202104071541026_Create_table_ChuyenPhong.Designer.cs">
+      <DependentUpon>202104071541026_Create_table_ChuyenPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071559436_Create_table_DuAn.cs" />
+    <Compile Include="Migrations\202104071559436_Create_table_DuAn.Designer.cs">
+      <DependentUpon>202104071559436_Create_table_DuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104080112030_Create_Table_NhanVien.cs" />
+    <Compile Include="Migrations\202104080112030_Create_Table_NhanVien.Designer.cs">
+      <DependentUpon>202104080112030_Create_Table_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ChiTietNghiViec.cs" />
     <Compile Include="Models\ChucVu.cs" />
+    <Compile Include="Models\ChuyenMon.cs" />
+    <Compile Include="Models\ChuyenPhong.cs" />
+    <Compile Include="Models\CongTac.cs" />
+    <Compile Include="Models\DuAn.cs" />
     <Compile Include="Models\KTKL.cs" />
     <Compile Include="Models\LTQLDb.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PhongBan.cs" />
+    <Compile Include="Models\ThanNhan.cs" />
+    <Compile Include="Models\TrinhDo.cs" />
+    <Compile Include="Models\TrinhDo_ChuyenMon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +233,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NhanViens\Create.cshtml" />
+    <Content Include="Views\NhanViens\Delete.cshtml" />
+    <Content Include="Views\NhanViens\Details.cshtml" />
+    <Content Include="Views\NhanViens\Edit.cshtml" />
+    <Content Include="Views\NhanViens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -210,9 +256,6 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103091611275_Create_Table_NhanVien.resx">
-      <DependentUpon>202103091611275_Create_Table_NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103091624187_Create_table_Chucvu.resx">
       <DependentUpon>202103091624187_Create_table_Chucvu.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +264,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103091748473_create_table_KTKL.resx">
       <DependentUpon>202103091748473_create_table_KTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103100144590_Create_Table_TrinhDo.resx">
+      <DependentUpon>202103100144590_Create_Table_TrinhDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071417180_Create_table_ThanNhan.resx">
+      <DependentUpon>202104071417180_Create_table_ThanNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071424304_Create_table_Chitietnghiviec.resx">
+      <DependentUpon>202104071424304_Create_table_Chitietnghiviec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071430589_Create_table_Congtac.resx">
+      <DependentUpon>202104071430589_Create_table_Congtac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071527030_Create_table_ChuyenMon.resx">
+      <DependentUpon>202104071527030_Create_table_ChuyenMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071535212_Create_Table_TrinhDo_ChuyenMon.resx">
+      <DependentUpon>202104071535212_Create_Table_TrinhDo_ChuyenMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071541026_Create_table_ChuyenPhong.resx">
+      <DependentUpon>202104071541026_Create_table_ChuyenPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071559436_Create_table_DuAn.resx">
+      <DependentUpon>202104071559436_Create_table_DuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104080112030_Create_Table_NhanVien.resx">
+      <DependentUpon>202104080112030_Create_Table_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

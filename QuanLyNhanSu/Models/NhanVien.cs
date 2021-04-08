@@ -11,12 +11,14 @@ namespace QuanLyNhanSu.Models
     public class NhanVien
     {
         [Key]
-        public int id { get; set; }
-        [Required, MaxLength(30)]
-        public string name { get; set; }
-        [Required, MinLength(10),MaxLength(14)]
-        public string phone { get; set; }
-        public string gioitinh { get; set; }
-        public string address { get; set; }
+        public int MaNV { get; set; }
+        public int MaChucVu { get; set; }
+        public string HoTen { get; set; }
+        public string Gioitinh { get; set; }
+        public string NgaySinh { get; set; }
+        public string QueQuan { get; set; }
+        public string DanToc { get; set; }
+        public string ChungMinhThu { get; set; }
+        public string Ma_PhongBan { get; set; }
     }
 }

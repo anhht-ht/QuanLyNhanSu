@@ -6,14 +6,14 @@ namespace QuanLyNhanSu.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Create_Table_NhanVien : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
+    public sealed partial class Create_table_ThanNhan : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_Table_NhanVien));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_table_ThanNhan));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103091611275_Create_Table_NhanVien"; }
+            get { return "202104071417180_Create_table_ThanNhan"; }
         }
         
         string IMigrationMetadata.Source
